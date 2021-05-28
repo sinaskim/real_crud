@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h2>제목 : {{post.title}}</h2>
+    <p>작성 일자 및 시간 :{{ post.pub_date }}</p>
+    <p>글쓴이 : {{post.writer}}</p>
+    <p>내용 : {{post.content}}</p>
+    <a href="{% url 'edit' post.id %}">수정하기</a>
+    <a href="{% url 'delete' post.id %}">삭제하기</a>
+{% endblock %}
